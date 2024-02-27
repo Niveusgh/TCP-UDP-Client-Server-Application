@@ -10,6 +10,7 @@
  * No one should use any sample code (or illustrations) from this 
  * book in any software application without first obtaining competent 
  * legal advice.
+ *
  */
 
 #include <stdio.h>

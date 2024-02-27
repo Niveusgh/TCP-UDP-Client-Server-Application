@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -g -Wall
 
-all: TCPEchoServer TCPEchoClient
+all: UDPEchoServer UDPEchoClient
 
-TCPEchoServer: TCPEchoServer.c TCPServerUtility.c DieWithMessage.c
+UDPEchoServer: UDPEchoServer.c DieWithMessage.c AddressUtility.c
 	$(CC) $(CFLAGS) -o $@ -std=gnu99 $^ 
 
-TCPEchoClient: TCPEchoClient.c DieWithMessage.c
+UDPEchoClient: UDPEchoClient.c DieWithMessage.c AddressUtility.c
 	$(CC) $(CFLAGS) -o $@ -std=gnu99 $^ 
 
 clean:
-	-rm -f *.o *~ *core* TCPEchoServer TCPEchoClient
+	-rm -f *.o *~ *core* UDPEchoServer UDPEchoClient
